@@ -4,8 +4,8 @@ This is an experimental VSCode extension of Type Definition Language (TDL) files
 
 The extension currently supports:
 
-- Syntactic Highlights: comments, strings, docstrings, brackets, definition operator (DEFOP, `:=`), multiple inheritance operator (AND, `&`), tag variables;
+- Syntactic Highlights: comments, strings, type docstrings, brackets, definition operator (DEFOP, `:=`), multiple inheritance operator (AND, `&`), tag variables;
 - Semantic Highlights of defined types (except for `*top*`);
-- Go-to definitions with docstring display on hovering;
+- Go-to definitions of defined types with docstring display on hovering;
 - Autocompletion of types and features based on attribute paths (buggy);
 - Automatic indentation upon newline (buggy).
