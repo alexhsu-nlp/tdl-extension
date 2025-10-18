@@ -20,6 +20,7 @@ $ cd /path/to/tdl/extension/directory
 $ npm install
 $ npm run compile
 ```
+- Follow the general instructions in [extension quickstart](https://github.com/alexhsu-nlp/tdl-extension/blob/main/vsc-extension-quickstart.md) to start the development host.
 
 #### Inside Docker Container
 - The [docker file](https://github.com/alexhsu-nlp/tdl-extension/blob/main/Dockerfile) in the repo should provide a good start. Make sure to modify the following code to specify your own local directory of the extension:
@@ -27,3 +28,14 @@ $ npm run compile
 # NOTE: type your own directory here
 # WORKDIR /path/to/your/extension/directory
 ```
+- Build the docker image and container. Note that we need to specifiy the grammar folder (or any folder that contains it) as the workspace:
+```
+$ cd /path/to/tdl/extension/directory
+$ docker build -t your-image-name .
+$ docker run -it --name your-container-name -v /your/grammar/folder:/home/dockeruser/workspace your-image-name
+```
+- Inside VSCode, press `F1` and select **Dev Containers: Attach to Running Container ...**
+- Select "Open Folder..." and select or type the folder you typed as `WORKDIR` above.
+- Follow the general instructions in [extension quickstart](https://github.com/alexhsu-nlp/tdl-extension/blob/main/vsc-extension-quickstart.md) to start the development host.
+- Select `/home/dockeruser/workspace` as the workspace.
+- You can start programming now.
