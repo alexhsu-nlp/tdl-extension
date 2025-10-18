@@ -21,6 +21,7 @@ $ npm install
 $ npm run compile
 ```
 - Press `F5` (maybe you need to select `extension.ts` in the primary side bar before doing so) to start the Extension Development Host in VSCode.
+- Select the local grammar folder and start programming.
 
 #### Inside Docker Container
 - The [docker file](https://github.com/alexhsu-nlp/tdl-extension/blob/main/Dockerfile) in the repo should provide a good start. Make sure to modify the following code to specify your own local directory of the extension:
