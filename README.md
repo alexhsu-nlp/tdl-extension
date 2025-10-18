@@ -9,3 +9,21 @@ The extension currently supports (assuming type and feature names are of ascii c
 - Go-to definitions of defined types with docstring display on hovering;
 - Autocompletion of types and features based on attribute paths (buggy);
 - Automatic indentation upon newline (buggy).
+
+### Setup
+
+#### Locally
+- Install nvm. [This website](https://heynode.com/tutorial/install-nodejs-locally-nvm/) serves as a good tutorial. Alternatively, the docker file (see below) should contain similar information.
+- Install node modules and compile typescript files:
+```
+$ cd /path/to/tdl/extension/directory
+$ npm install
+$ npm run compile
+```
+
+#### Inside Docker Container
+- The [docker file](https://github.com/alexhsu-nlp/tdl-extension/blob/main/Dockerfile) in the repo should provide a good start. Make sure to modify the following code to specify your own local directory of the extension:
+```
+# NOTE: type your own directory here
+# WORKDIR /path/to/your/extension/directory
+```
