@@ -13,7 +13,7 @@ The extension currently supports (assuming type and feature names are of ascii c
 ### Setup
 
 #### Locally
-- Install nvm. [This website](https://heynode.com/tutorial/install-nodejs-locally-nvm/) serves as a good tutorial. Alternatively, the docker file (see below) should contain similar information.
+- Install nvm and update node.js (if needed). [This website](https://heynode.com/tutorial/install-nodejs-locally-nvm/) serves as a good tutorial. Alternatively, the docker file (see below) should contain similar information.
 - Install node modules and compile typescript files:
 ```
 $ cd /path/to/tdl/extension/directory
