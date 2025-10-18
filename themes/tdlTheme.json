@@ -1,0 +1,53 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "TDL default scheme",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#0f0f0f",
+        "editor.foreground": "#d4d4d4",
+    },
+    "tokenColors": [
+        {
+            "scope": "typedef.operator.tdl",
+            "settings": {
+                "foreground": "#61AFEF"
+            }
+        },
+        {
+            "scope": "tag.var.tdl",
+            "settings": {
+                "foreground": "#17C2A2"
+            }
+        },
+        {
+            "scope": "multinher.operator.tdl",
+            "settings": {
+                "foreground": "#B723D9"
+            }
+        },
+        {
+            "scope": "comment.line.tdl",
+            "settings": {
+                "foreground": "#6A9955"
+            }
+        },
+        {
+            "scope": "blockcomment.line.tdl",
+            "settings": {
+                "foreground": "#6A9955"
+            }
+        },
+        {
+            "scope": "docstring.line.tdl",
+            "settings": {
+                "foreground": "#CE9178"
+            }
+        },
+        {
+            "scope": "string.line.tdl",
+            "settings": {
+                "foreground": "#C27B17"
+            }
+        },
+    ]
+}

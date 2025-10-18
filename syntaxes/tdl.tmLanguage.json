@@ -1,0 +1,35 @@
+{
+    "scopeName": "source.tdl",
+    "patterns": [
+        {
+            "name": "typedef.operator.tdl",
+            "match": ":="
+        },
+        {
+            "name": "multinher.operator.tdl",
+            "match": "&"
+        },
+        {
+            "name": "tag.var.tdl",
+            "match": "#[a-z0-9_+\\-]+"
+        },
+        {
+            "name": "comment.line.tdl",
+            "match": ";.*$"
+        },
+        {
+            "name": "blockcomment.line.tdl",
+            "begin": "#\\|",
+            "end": "\\|#"
+        },
+        {
+            "name": "docstring.line.tdl",
+            "begin": "\"\"\"",
+            "end": "\"\"\""
+        },
+        {
+            "name": "string.line.tdl",
+            "match": "(?<!\")\"[^\"\n]*\"(?!\")"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+  "name": "tdl-support",
+  "displayName": "tdl-support",
+  "description": "LEAVE BLANK",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^7.0.0",
+    "vscode-languageserver": "^7.0.0",
+    "vscode-languageserver-textdocument": "^1.0.1",
+    "vscode-uri": "^3.1.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "TDL Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tdlTheme.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[tdl]": {
+        "editor.semanticHighlighting.enabled": true
+      }
+    },
+    "semanticTokenTypes": [
+      {
+        "id": "type-tdl",
+        "description": "types of tdls"
+      },
+      {
+        "id": "variable-tdl",
+        "description": "tags of tdls"
+      },
+      {
+        "id": "property-tdl",
+        "description": "features of tdls"
+      }
+    ],
+    "languages": [
+      {
+        "id": "tdl",
+        "extensions": [
+          ".tdl"
+        ],
+        "aliases": [
+          "TDL",
+          "TypeDescriptionLanguage"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tdl",
+        "path": "./syntaxes/tdl.tmLanguage.json",
+        "scopeName": "source.tdl"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "tdlLanguageServer.trace.server": {
+          "default": "verbose"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "tdl-support.hellovscode",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.104.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2",
+    "xregexp": "^5.1.2"
+  }
+}
